@@ -1,0 +1,10 @@
+/* Jason Project */
+
+MAS meta_events {
+
+    environment: World
+
+    agents:
+        robot; // [mindinspector="gui(cycle,html,history)"];
+
+}

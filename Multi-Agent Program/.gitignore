@@ -1,0 +1,43 @@
+.DS_Store
+bin
+build
+.project
+.classpath
+
+*.class
+*.log
+.gradle
+.settings
+.stop___MAS
+
+doc/faq.html
+doc/api
+doc/tech/*Parser.html
+readme.html
+release-notes.html
+doc/tutorials/getting-started/shell-based.html
+doc/tech/concurrency.html
+doc/tech/annotations.html
+
+*~
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+bookstore.*
+doc/index.html
+
+APDescription.txt
+MTPs-Main-Container.txt
+demos/persistent-belief-base/bookstore.log
+doc/tech/unit-tests.html
+doc/tech/patterns.html
+doc/tutorials/getting-started/index.html

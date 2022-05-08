@@ -1,0 +1,15 @@
+/*
+   Jason Project
+
+   Exemplifies the use of pre-defined arithmetic functions and
+   how to define new functions in Java and AS.
+
+*/
+
+MAS function {
+
+    agents:
+        a;
+
+}
+

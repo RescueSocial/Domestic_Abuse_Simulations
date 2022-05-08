@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source "`dirname "$0"`/jason-setup"
+
+JEDIT_HOME=$JASON_HOME/jedit
+
+systemName="$(uname -s)"
+case "${systemName}" in
+    CYGWIN*)    os=win;;
+    MINGW*)     os=win;;
+    *)          os=nix
+esac
+
+if [ ${os} == "win" ]; then
+  CP="$JASON_JAR;$JEDIT_HOME/jedit.jar;$JEDIT_HOME/jars/ErrorList.jar;$JEDIT_HOME/jars/SideKick.jar;$JADE_JAR"
+else
+  CP="$JASON_JAR:$JEDIT_HOME/jedit.jar:$JEDIT_HOME/jars/ErrorList.jar:$JEDIT_HOME/jars/SideKick.jar:$JADE_JAR"
+fi
+
+CP="$CP:/usr/lib/swi-prolog/lib/jpl.jar:/usr/lib/swi-prolog/lib/x86_64-linux/libjpl.so"
+
+# run jIDE
+java \
+-classpath $CP \
+-Djava.library.path="/usr/lib/swi-prolog/lib/jpl.jar:/usr/lib/swi-prolog/lib/x86_64-linux/libjpl.so:/usr/local/cuda-8.0/lib64:/usr/local/cuda-8.0/lib64:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib" \
+   org.gjt.sp.jedit.jEdit $1

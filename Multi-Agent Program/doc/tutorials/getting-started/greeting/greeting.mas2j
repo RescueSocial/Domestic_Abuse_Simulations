@@ -1,0 +1,12 @@
+/* Jason Project */
+
+MAS greeting {
+
+    infrastructure: Local
+
+    agents:
+        bob;
+        tom;
+
+}
+

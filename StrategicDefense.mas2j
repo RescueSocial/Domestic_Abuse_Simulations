@@ -1,0 +1,36 @@
+/*
+In this system, two agents are inside a room and
+one agent (the claustrophobe) wants to maintain
+the door always unlocked, while another (the paranoid)
+wants to maintain it locked!
+
+The porter is the agent that is capable to (un)lock
+the door (i.e., to act in the environment). So other
+agents should ask him such services.
+
+A Prometheus specification is available in the doc folder.
+
+*/
+
+MAS strategicdefenseadapter {
+
+    environment:
+       StrategicDefenseAdapterEnv
+
+    // synchronise the execution: an agent only
+    // starts its next reasoning cycle when all others
+    // have finished theirs.
+    executionControl:
+       jason.control.ExecutionControl
+
+    // agents: porter; claustrophobe; paranoid;
+    agents:
+    guardianagent guardianagent.asl [beliefs="continue"];
+        jane wife.asl [beliefs=""];
+        john husband.asl [beliefs=""];
+    
+    classpath:
+        "/usr/lib/swi-prolog/lib/jpl.jar";
+        "/usr/lib/swi-prolog/lib/x86_64-linux/libjpl.so";
+
+}
