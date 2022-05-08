@@ -1,4 +1,4 @@
-# domestic_abuse_simulations
+# Domestic_Abuse_Simulations
 <b>Simulations of domestic abuse & coercive control traits from articles, narratives, timelines, documents, media on domestic abuse with multi-agent modeling. Abuse AI Simulation/Predict Training, action-trees</b>
 
 Creates a narrative from articles describing types of domestic abuse and timelines from stories on victims in the media, training materials, and documentations.
